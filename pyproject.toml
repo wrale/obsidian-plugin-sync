@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "obsidian-plugin-sync"
+version = "0.1.0"
+description = "A tool for syncing Obsidian plugin development files to your Obsidian vault"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+authors = [{ name = "Joshua M. Dotson", email = "contact@jmdots.com" }]
+maintainers = [{ name = "Joshua M. Dotson", email = "contact@jmdots.com" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Topic :: Software Development :: Build Tools",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/wrale/obsidian-plugin-sync"
+"Bug Tracker" = "https://github.com/wrale/obsidian-plugin-sync/issues"
+
+[project.optional-dependencies]
+watch = ["watchdog"]
+
+[project.scripts]
+obsidian-plugin-sync = "obsidian_plugin_sync:main"
